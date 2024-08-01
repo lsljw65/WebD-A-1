@@ -380,3 +380,15 @@ div.sub-menu-back {
   background-color: white;
   display: none;
 }
+
+/* banner hover */
+.banner,
+.shortcut span {
+  transition: 0.8s;
+}
+.banner:hover {
+  opacity: 0.8;
+}
+.shortcut span:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
