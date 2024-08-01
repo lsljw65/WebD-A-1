@@ -185,6 +185,7 @@ div.tabs-content-g {
 }
 
 #notic {
+  display: flex;
   flex-direction: column;
   list-style: none;
   width: 100%;

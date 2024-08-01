@@ -30,7 +30,16 @@ $(function () {
       });
     count++;
   }, 3000);
+
   //   tab구현
   $(".tab-content").hide();
   $(".tab-content").eq(0).show();
+  $(".tabs>li>a").click(function () {
+    console.log("클릭");
+    $(".tab-content").hide();
+    $(this.hash).show().css({ display: "flex" });
+    $(".tabs>li>a").removeClass("active");
+    $(this).addClass("active");
+    return false;
+  });
 });
