@@ -17,7 +17,19 @@ $(function () {
     $(".sub-menu-back").stop().slideDown();
     $(".sub-menu").stop().slideDown();
   });
-
+  //   슬라이드
+  var count = 0;
+  setInterval(function () {
+    if (count === 3) {
+      count = 0;
+    }
+    $("#main-slide>ul")
+      .stop()
+      .animate({
+        left: -1200 * count,
+      });
+    count++;
+  }, 3000);
   //   tab구현
   $(".tab-content").hide();
   $(".tab-content").eq(0).show();
