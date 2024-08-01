@@ -101,7 +101,7 @@ nav > ul > li > a:hover {
 section {
   width: 100%;
   height: 500px;
-  background-color: #cccccc;
+  /* background-color: #cccccc; */
 }
 /* 콘텐츠 세부 구조 디자인 */
 #main-slide {
@@ -130,7 +130,7 @@ section {
 #content-g {
   width: 100%;
   height: 200px;
-  background-color: #d4bbdf;
+  /* background-color: #d4bbdf; */
 
   display: flex;
 }
@@ -139,7 +139,91 @@ section {
   width: 33.333%;
   height: 100%;
   border-right: 1px solid black;
+  padding: 5px;
 }
+
+/* 공지사항과 갤러리 세부 디자인 */
+ul.tabs {
+  width: 50%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  z-index: 10;
+  margin-left: 10px;
+}
+ul.tabs li {
+  width: 50%;
+  height: 100%;
+}
+
+ul.tabs li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #666666;
+  justify-content: center;
+  align-items: center;
+  background-color: lightskyblue;
+}
+ul.tabs li:last-child a {
+  margin-left: -1px;
+}
+ul.tabs li a.active {
+  border-bottom: 1px solid white;
+  background-color: white;
+}
+
+div.tabs-content-g {
+  width: 100%;
+  height: 150px;
+  border: 1px solid black;
+  margin-top: -1px;
+  position: relative;
+  z-index: 9;
+}
+
+#notic {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+#notic li {
+  width: 100%;
+  height: 25%;
+  border-bottom: 1px solid #acacac;
+}
+#notic li:last-child {
+  border-bottom: none;
+}
+#notic li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+
+#gallery {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#gallery li {
+  width: 25%;
+  border: 1px solid #acacac;
+}
+#gallery li img {
+  width: 100%;
+}
+
 .banner {
   width: 33.333%;
   height: 100%;
