@@ -10,12 +10,12 @@ $(function () {
     });
   });
   $("nav").mouseenter(function () {
-    $(".sub-menu-back").slideDown();
-    $(".sub-menu").slideDown();
+    $(".sub-menu-back").stop().slideDown();
+    $(".sub-menu").stop().slideDown();
   });
   $("nav").mouseleave(function () {
-    $(".sub-menu-back").slideUp();
-    $(".sub-menu").slideUp();
+    $(".sub-menu-back").stop().slideUp();
+    $(".sub-menu").stop().slideUp();
   });
   //   슬라이드
   var count = 0;
