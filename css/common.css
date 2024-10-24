@@ -1,0 +1,396 @@
+@charset "utf-8";
+html,
+body {
+  margin: 0 auto;
+  font-family: "맑은고딕";
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333333;
+  width: 1200px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+a:hover {
+  color: #666666;
+}
+
+/* 헤더 */
+header {
+  width: 100%;
+  height: 100px;
+  /* background-color: #dddddd; */
+
+  display: flex;
+  align-items: center;
+}
+/* 헤더 세부 구조 디자인 */
+h1 {
+  width: 200px;
+  height: 40px;
+  /* background-color: #f9d0d0; */
+}
+/* h1 내용 세부 디자인 */
+h1 > a {
+  display: flex;
+}
+h1 > a img {
+  width: 100%;
+}
+
+#nav-wrap {
+  width: 1000px;
+  height: 100px;
+  /* background-color: #d3b2b2; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+}
+/* nav 내용 세부 디자인 */
+nav {
+  width: 60%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+nav > ul {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #444444;
+  display: flex;
+}
+nav > ul > li {
+  width: 25%;
+  height: 100%;
+  border-right: 1px solid black;
+  position: relative;
+  z-index: 999;
+}
+nav > ul > li:last-child {
+  border-right: none;
+}
+nav > ul > li > a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: darkcyan;
+  color: white;
+}
+nav > ul > li > a:hover {
+  background-color: lightpink;
+  color: black;
+}
+
+/* 콘텐츠 */
+section {
+  width: 100%;
+  height: 500px;
+  /* background-color: #cccccc; */
+}
+/* 콘텐츠 세부 구조 디자인 */
+#main-slide {
+  width: 100%;
+  height: 300px;
+  /* background-color: #cfc0d5; */
+  overflow: hidden;
+}
+/* 슬라이드 디자인 */
+#main-slide > ul {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  /* background-color: red; */
+  list-style: none;
+  position: relative;
+  left: 0;
+}
+#main-slide > ul > li {
+  width: 33.33%;
+  height: 100%;
+}
+#main-slide > ul img {
+  vertical-align: bottom;
+}
+#content-g {
+  width: 100%;
+  height: 200px;
+  /* background-color: #d4bbdf; */
+
+  display: flex;
+}
+/* content-g 세부 구조 디자인 */
+.notic-gallery {
+  width: 33.333%;
+  height: 100%;
+  border-right: 1px solid black;
+  padding: 5px;
+}
+
+/* 공지사항과 갤러리 세부 디자인 */
+ul.tabs {
+  width: 50%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  z-index: 10;
+  margin-left: 10px;
+}
+ul.tabs li {
+  width: 50%;
+  height: 100%;
+}
+
+ul.tabs li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #666666;
+  justify-content: center;
+  align-items: center;
+  background-color: lightskyblue;
+}
+ul.tabs li:last-child a {
+  margin-left: -1px;
+}
+ul.tabs li a.active {
+  border-bottom: 1px solid white;
+  background-color: white;
+}
+
+div.tabs-content-g {
+  width: 100%;
+  height: 150px;
+  border: 1px solid black;
+  margin-top: -1px;
+  position: relative;
+  z-index: 9;
+}
+#notic {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+#notic li {
+  width: 100%;
+  height: 25%;
+  border-bottom: 1px solid #acacac;
+}
+#notic li:last-child {
+  border-bottom: none;
+}
+#notic li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+
+#gallery {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#gallery li {
+  width: 25%;
+  border: 1px solid #acacac;
+}
+#gallery li img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+ul.tab-content {
+  display: none;
+}
+ul.tab-content:first-child {
+  display: flex;
+}
+
+.banner {
+  width: 33.333%;
+  height: 100%;
+  padding: 10px;
+}
+.banner a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.banner img {
+  width: 100%;
+  vertical-align: bottom;
+}
+.shortcut {
+  width: 33.333%;
+  height: 100%;
+  border-left: 1px solid black;
+  padding: 10px;
+}
+.shortcut a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.shortcut img {
+  width: 100%;
+  vertical-align: bottom;
+}
+.shortcut a span {
+  display: flex;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* 푸터 */
+footer {
+  width: 100%;
+  height: 100px;
+  /* background-color: #bbbbbb; */
+
+  display: flex;
+  align-items: center;
+}
+/* 푸터 세부 구조 디자인 */
+h2 {
+  width: 200px;
+  height: 40px;
+  /* background-color: #a4abc0; */
+}
+/* 푸터 하단 로고 세부 디자인 */
+h2 a {
+  display: block;
+  height: 100%;
+}
+h2 img {
+  width: 100%;
+}
+#copy {
+  width: 800px;
+  height: 100px;
+  background-color: #8f9dc6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sns {
+  width: 200px;
+  height: 100px;
+  /* background-color: #7b8cc0; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#sns a {
+  display: block;
+  width: 50px;
+}
+#sns a img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+main {
+  position: relative;
+}
+#popup {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: 99999;
+  background-color: white;
+  border: 2px solid #aaaaaa;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  display: none;
+}
+#popup h2 {
+  width: 100%;
+}
+#popup p {
+  line-height: 200%;
+  font-size: 1rem;
+}
+.pop-close {
+  padding: 10px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* 드롭다운 디자인 */
+
+div.sub-menu {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  top: 49px;
+  background-color: white;
+  display: none;
+}
+div.sub-menu > a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+}
+div.sub-menu > a:hover {
+  background-color: pink;
+}
+nav > ul > li > a.active {
+  background-color: lightpink;
+  color: black;
+}
+div.sub-menu-back {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  z-index: 99;
+  top: 49px;
+  border: 1px solid black;
+  background-color: white;
+  display: none;
+}
+
+/* 배너, 바로가기 hover 애니메이션 */
+.banner img,
+.shortcut span {
+  transition: 0.8s;
+}
+.banner:hover img {
+  opacity: 0.5;
+}
+.shortcut span:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
